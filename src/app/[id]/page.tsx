@@ -1,4 +1,7 @@
 import api from "@/api";
+import RestaurantCard from "../components/RestaurantCard";
+
+
 
 export default async function RestaurantPage({params}: {params: Promise<{id: string}>}) {
   const {id} = await params;
@@ -6,6 +9,7 @@ export default async function RestaurantPage({params}: {params: Promise<{id: str
 
   return (
     <article key={restaurant.id}>
+      <RestaurantCard></RestaurantCard>
       <img
         alt={restaurant.name}
         className="mb-3 h-[300px] w-full object-cover"
