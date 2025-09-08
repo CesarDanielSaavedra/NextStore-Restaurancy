@@ -122,14 +122,14 @@ const api = {
   // Obtener todos los restaurantes
   list: async (): Promise<Restaurant[]> => {
     // Simular un delay en la respuesta de la API
-    await sleep(750);
+    await sleep(400);
 
     return restaurants;
   },
   // Obtener un restaurante específico por su ID
   fetch: async (id: Restaurant["id"]): Promise<Restaurant> => {
     // Simular un delay en la respuesta de la API
-    await sleep(750);
+    await sleep(400);
 
     // Buscar el restaurante con el ID correspondiente
     const restaurant = restaurants.find((restaurant) => restaurant.id === id);
